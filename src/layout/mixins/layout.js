@@ -1,4 +1,4 @@
-export { default as LayoutDependent } from './LayoutDependent'
-export { default as LayoutProvider } from './LayoutProvider'
-export { default as LayoutVariant } from './LayoutVariant'
-export { default as LayoutSidebarMenu } from './LayoutSidebarMenu'
+export { default as LayoutDependent } from './LayoutDependent.js'
+export { default as LayoutProvider } from './LayoutProvider.js'
+export { default as LayoutVariant } from './LayoutVariant.js'
+export { default as LayoutSidebarMenu } from './LayoutSidebarMenu.js'
