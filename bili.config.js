@@ -4,7 +4,7 @@ const plugins = {
     // https://github.com/egoist/bili/issues/196#issuecomment-499325258
     runtimeHelpers: true,
     presetOptions: {
-      corejs: 3
+      corejs: 3,
     }
   },
   vue: {
@@ -23,8 +23,8 @@ const plugins = {
 
 const input = {
   index: 'src/layout/index.vue',
-  icons: 'src/icons/index.js',
   mixins: 'src/layout/mixins/index.js',
+  sfc: 'src/layout/bundle.js',
 }
 
 /** @type {import('bili').ConfigOutput} */
