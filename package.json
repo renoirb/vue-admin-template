@@ -14,8 +14,9 @@
   "scripts": {
     "build:prod": "vue-cli-service build",
     "build:stage": "vue-cli-service build --mode staging",
-    "bundle": "yarn run bundle:bili && yarn run bundle:pack",
+    "bundle": "yarn run bundle:bili && yarn run bundle:poi && yarn run bundle:pack",
     "bundle:bili": "bili --config ./bili.config.js",
+    "bundle:poi": "poi --no-clear-console --production",
     "bundle:pack": "yarn pack",
     "dev": "vue-cli-service serve",
     "lint": "eslint --ext .js,.vue src",
