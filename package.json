@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-template",
-  "version": "4.2.1",
+  "version": "4.2.1-alpha.1",
   "description": "A vue admin template with Element UI & axios & iconfont & permission control & lint",
   "license": "MIT",
   "author": "Pan <panfree23@gmail.com>",
@@ -15,13 +15,15 @@
     "build:prod": "vue-cli-service build",
     "build:stage": "vue-cli-service build --mode staging",
     "bundle": "yarn run bundle:bili && yarn run bundle:poi && yarn run bundle:pack",
-    "bundle:bili": "bili --config ./bili.config.js",
-    "bundle:poi": "poi --no-clear-console --production",
+    "bundle:bili": "use-bili",
     "bundle:pack": "yarn pack",
+    "bundle:poi": "poi --no-clear-console --production",
     "dev": "vue-cli-service serve",
-    "lint": "eslint --ext .js,.vue src",
+    "fix": "pretty-quick",
+    "lint": "use-eslint --ext .js,.vue src",
     "preview": "node build/index.js --preview",
     "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
+    "test": "npm run test:unit",
     "test:ci": "npm run lint && npm run test:unit",
     "test:unit": "jest --clearCache && vue-cli-service test:unit"
   },
@@ -30,6 +32,8 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "@babel/preset-env": "^7.4.0",
+    "@babel/runtime-corejs3": "~7.5.5",
     "axios": "0.18.1",
     "element-ui": "2.7.2",
     "normalize.css": "7.0.0",
@@ -37,15 +41,19 @@
     "vuex": "3.1.0"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0",
-    "@babel/register": "7.0.0",
+    "@babel/core": "^7.4.0",
+    "@babel/register": "^7.4.0",
+    "@frontend-bindings/conventions-use-bili": "file:../packages/frontend-bindings-conventions-use-bili-1.0.0.tgz",
+    "@frontend-bindings/conventions-use-eslint": "file:../packages/frontend-bindings-conventions-use-eslint-1.0.0.tgz",
+    "@frontend-bindings/conventions-use-jest": "file:../packages/frontend-bindings-conventions-use-jest-1.0.0.tgz",
+    "@frontend-bindings/conventions-use-prettier": "file:../packages/frontend-bindings-conventions-use-prettier-1.0.0.tgz",
+    "@frontend-bindings/tools-bundling-helpers": "file:../packages/frontend-bindings-tools-bundling-helpers-1.0.0.tgz",
     "@vue/cli-plugin-babel": "3.6.0",
     "@vue/cli-plugin-eslint": "^3.9.1",
     "@vue/cli-plugin-unit-jest": "3.6.3",
     "@vue/cli-service": "3.6.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "autoprefixer": "^9.5.1",
-    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "bili": "^4.8.1",
@@ -74,7 +82,7 @@
     "vue-template-compiler": "2.6.10"
   },
   "peerDependencies": {
-    "@babel/runtime": "7.0.0",
+    "@babel/runtime": "^7.4.0",
     "core-js": "^3.0.0",
     "vue-runtime-helpers": "^1.0.1"
   },

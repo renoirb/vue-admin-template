@@ -37,7 +37,7 @@ import { LayoutVariant, LayoutProvider, LayoutSidebarMenu } from './mixins'
 
 /** @type {import('vue').VueConstructor} */
 const main = {
-  name: 'Layout',
+  name: 'AppLayout',
 
   components,
 
@@ -189,6 +189,7 @@ const main = {
     setSidebarState(state = {}) {
       const changeset = { opened: false, ...state }
       let hasChanges = false
+      /* eslint-disable no-unused-vars */
       for (const [prop, val] of Object.entries(changeset)) {
         if (this.sidebarState[prop] !== val) {
           hasChanges = true

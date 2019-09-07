@@ -1,4 +1,3 @@
-
 // https://poi.js.org/config.html#entry
 const entry = {
   layout: 'src/layout/bundle.js'
@@ -8,7 +7,7 @@ const output = {
   format: 'cjs',
   target: 'web',
   dir: 'dist/poi',
-  clean: false,
+  clean: false
 }
 
 const babel = {
@@ -19,8 +18,7 @@ const babel = {
 const config = {
   entry,
   output,
-  babel,
+  babel
 }
 
 module.exports = config
-

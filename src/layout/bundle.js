@@ -15,10 +15,7 @@ const components = {
   ...importingComponents
 }
 
-export {
-  components,
-  mixins
-}
+export { components, mixins }
 
 /**
  * Do pretty much the same as ../icons/index.svg.
@@ -29,6 +26,7 @@ const requireAll = requireContext => requireContext.keys().map(requireContext)
 requireAll(req)
 
 export const install = function(Vue, opts = {}) {
+  /* eslint-disable no-unused-vars */
   for (const [name, component] of Object.entries(components)) {
     const hypenated = name.replace(/\B([A-Z])/g, '-$1').toLowerCase()
     // console.log('element-ui', name, hypenated)

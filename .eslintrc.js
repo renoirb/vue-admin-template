@@ -10,9 +10,8 @@ module.exports = {
     es6: true,
   },
   extends: ['plugin:vue/recommended', 'eslint:recommended'],
-
-  // add your custom rules here
-  //it is base on https://github.com/vuejs/eslint-config-vue
+  // add your custom rules here it is base on
+  // https://github.com/vuejs/eslint-config-vue
   rules: {
     "vue/max-attributes-per-line": [2, {
       "singleline": 10,
@@ -99,17 +98,23 @@ module.exports = {
     'no-irregular-whitespace': 2,
     'no-iterator': 2,
     'no-label-var': 2,
-    'no-labels': [2, {
-      'allowLoop': false,
-      'allowSwitch': false
-    }],
+    'no-labels': [
+      2,
+      {
+        allowLoop: false,
+        allowSwitch: false,
+      },
+    ],
     'no-lone-blocks': 2,
     'no-mixed-spaces-and-tabs': 2,
     'no-multi-spaces': 2,
     'no-multi-str': 2,
-    'no-multiple-empty-lines': [2, {
-      'max': 1
-    }],
+    'no-multiple-empty-lines': [
+      2,
+      {
+        max: 1,
+      },
+    ],
     'no-native-reassign': 2,
     'no-negated-in-lhs': 2,
     'no-new-object': 2,
@@ -137,62 +142,101 @@ module.exports = {
     'no-undef-init': 2,
     'no-unexpected-multiline': 2,
     'no-unmodified-loop-condition': 2,
-    'no-unneeded-ternary': [2, {
-      'defaultAssignment': false
-    }],
+    'no-unneeded-ternary': [
+      2,
+      {
+        defaultAssignment: false,
+      },
+    ],
     'no-unreachable': 2,
     'no-unsafe-finally': 2,
-    'no-unused-vars': [2, {
-      'vars': 'all',
-      'args': 'none'
-    }],
+    'no-unused-vars': [
+      2,
+      {
+        vars: 'all',
+        args: 'none',
+      },
+    ],
     'no-useless-call': 2,
     'no-useless-computed-key': 2,
     'no-useless-constructor': 2,
     'no-useless-escape': 0,
     'no-whitespace-before-property': 2,
     'no-with': 2,
-    'one-var': [2, {
-      'initialized': 'never'
-    }],
-    'operator-linebreak': [2, 'after', {
-      'overrides': {
-        '?': 'before',
-        ':': 'before'
-      }
-    }],
+    'one-var': [
+      2,
+      {
+        initialized: 'never',
+      },
+    ],
+    'operator-linebreak': [
+      2,
+      'after',
+      {
+        overrides: {
+          '?': 'before',
+          ':': 'before',
+        },
+      },
+    ],
     'padded-blocks': [2, 'never'],
-    'quotes': [2, 'single', {
-      'avoidEscape': true,
-      'allowTemplateLiterals': true
-    }],
-    'semi': [2, 'never'],
-    'semi-spacing': [2, {
-      'before': false,
-      'after': true
-    }],
+    quotes: [
+      2,
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true,
+      },
+    ],
+    semi: [2, 'never'],
+    'semi-spacing': [
+      2,
+      {
+        before: false,
+        after: true,
+      },
+    ],
     'space-before-blocks': [2, 'always'],
     'space-before-function-paren': [2, 'never'],
     'space-in-parens': [2, 'never'],
     'space-infix-ops': 2,
-    'space-unary-ops': [2, {
-      'words': true,
-      'nonwords': false
-    }],
-    'spaced-comment': [2, 'always', {
-      'markers': ['global', 'globals', 'eslint', 'eslint-disable', '*package', '!', ',']
-    }],
+    'space-unary-ops': [
+      2,
+      {
+        words: true,
+        nonwords: false,
+      },
+    ],
+    'spaced-comment': [
+      2,
+      'always',
+      {
+        markers: [
+          'global',
+          'globals',
+          'eslint',
+          'eslint-disable',
+          '*package',
+          '!',
+          ',',
+        ],
+      },
+    ],
     'template-curly-spacing': [2, 'never'],
     'use-isnan': 2,
     'valid-typeof': 2,
     'wrap-iife': [2, 'any'],
     'yield-star-spacing': [2, 'both'],
-    'yoda': [2, 'never'],
+    yoda: [2, 'never'],
     'prefer-const': 2,
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'object-curly-spacing': [2, 'always', {
-      objectsInObjects: false
-    }],
-    'array-bracket-spacing': [2, 'never']
-  }
+    'object-curly-spacing': [
+      2,
+      'always',
+      {
+        objectsInObjects: false,
+      },
+    ],
+    'array-bracket-spacing': [2, 'never'],
+  },
 }
